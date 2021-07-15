@@ -11,7 +11,8 @@ class MovieVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    private var page = 1
+    private var page = 0
+    private var total_page = Int()
     private var isLoadingMore = false
     private var movies = [Movie]()
     
@@ -23,7 +24,25 @@ class MovieVC: UIViewController {
     }
     
     func read_movies() {
-        
+        if page > 0 && page == total_page {
+            print("read all")
+            return
+        }
+        page += 1
+        Services.get_top_movies(page: page) {(result, error) in
+            if error != nil {
+                print(error!)
+                return
+            }
+            for item in result!["results"].arrayValue {
+                self.movies.append(Movie(item))
+            }
+            self.total_page = result!["total_pages"].intValue
+            DispatchQueue.main.async {
+                self.isLoadingMore = false
+                self.tableView.reloadData()
+            }
+        }
     }
     
     func setupTableView() {
@@ -31,7 +50,7 @@ class MovieVC: UIViewController {
         tableView.delegate = self
         tableView.rowHeight = 120
         tableView.register(UINib(nibName: "MovieCell", bundle: nil), forCellReuseIdentifier: "MovieCell")
-        tableView.mask = nil
+        tableView.separatorStyle = .none
         tableView.reloadData()
     }
 }

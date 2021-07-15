@@ -68,15 +68,25 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1QP-Wd-NWO">
+                                <rect key="frame" x="0.0" y="123" width="471" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="7vD-TA-HPg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="JcS-jq-8Jh" secondAttribute="bottom" constant="10" id="1jv-ci-TOk"/>
                             <constraint firstItem="MK0-LK-gRF" firstAttribute="leading" secondItem="JcS-jq-8Jh" secondAttribute="trailing" constant="15" id="6QU-fk-nEg"/>
+                            <constraint firstAttribute="bottom" secondItem="1QP-Wd-NWO" secondAttribute="bottom" id="Cub-sb-Oqs"/>
                             <constraint firstAttribute="bottom" secondItem="MK0-LK-gRF" secondAttribute="bottom" constant="15" id="JM6-Yi-end"/>
+                            <constraint firstAttribute="trailing" secondItem="1QP-Wd-NWO" secondAttribute="trailing" id="T8v-nv-93e"/>
                             <constraint firstItem="JcS-jq-8Jh" firstAttribute="top" secondItem="6cJ-Ix-U0l" secondAttribute="top" constant="10" id="hQo-xT-CCP"/>
                             <constraint firstAttribute="trailing" secondItem="MK0-LK-gRF" secondAttribute="trailing" constant="15" id="lu0-t2-6NE"/>
                             <constraint firstItem="MK0-LK-gRF" firstAttribute="top" secondItem="6cJ-Ix-U0l" secondAttribute="top" constant="15" id="nlF-wa-LC4"/>
+                            <constraint firstItem="1QP-Wd-NWO" firstAttribute="leading" secondItem="6cJ-Ix-U0l" secondAttribute="leading" id="oY3-gQ-ZmD"/>
                             <constraint firstItem="JcS-jq-8Jh" firstAttribute="leading" secondItem="6cJ-Ix-U0l" secondAttribute="leading" constant="15" id="sFO-lL-fWE"/>
                         </constraints>
                     </view>

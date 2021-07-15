@@ -2,12 +2,14 @@ PODS:
   - Alamofire (5.4.1)
   - Cosmos (23.0.0)
   - Kingfisher (6.2.1)
+  - ReachabilitySwift (5.0.0)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Alamofire
   - Cosmos
   - Kingfisher
+  - ReachabilitySwift
   - SwiftyJSON
 
 SPEC REPOS:
@@ -15,14 +17,16 @@ SPEC REPOS:
     - Alamofire
     - Cosmos
     - Kingfisher
+    - ReachabilitySwift
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
   Kingfisher: e71c6fac2aebb1262888cabc2cb13d313362a48f
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: d8d9d3afcbe56b2cd0f2e5e0cb96270181f7c3d9
+PODFILE CHECKSUM: 6bf5e4c8f4f8d60933d5111de1c36d3c7aaae33a
 
 COCOAPODS: 1.10.1

@@ -11,5 +11,6 @@ pod 'Alamofire'
 pod 'SwiftyJSON'
 pod 'Kingfisher'
 pod 'Cosmos'
+pod 'ReachabilitySwift'
 
 end

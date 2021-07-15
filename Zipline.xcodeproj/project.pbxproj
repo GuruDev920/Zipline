@@ -12,6 +12,8 @@
 		A4AF58EF26A049F2005A222F /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4AF58ED26A049F2005A222F /* MovieCell.xib */; };
 		A4AF58F926A04BFF005A222F /* Ext_UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AF58F826A04BFF005A222F /* Ext_UIImageView.swift */; };
 		A4AF58FD26A04CBD005A222F /* ShareData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AF58FC26A04CBD005A222F /* ShareData.swift */; };
+		A4AF590226A04E20005A222F /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AF590126A04E20005A222F /* ApiRequest.swift */; };
+		A4AF590626A04E27005A222F /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AF590526A04E27005A222F /* Services.swift */; };
 		A4CFB80C269F460A00B780A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CFB80B269F460A00B780A5 /* AppDelegate.swift */; };
 		A4CFB80E269F460A00B780A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CFB80D269F460A00B780A5 /* SceneDelegate.swift */; };
 		A4CFB815269F460B00B780A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4CFB814269F460B00B780A5 /* Assets.xcassets */; };
@@ -30,6 +32,8 @@
 		A4AF58ED26A049F2005A222F /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 		A4AF58F826A04BFF005A222F /* Ext_UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ext_UIImageView.swift; sourceTree = "<group>"; };
 		A4AF58FC26A04CBD005A222F /* ShareData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareData.swift; sourceTree = "<group>"; };
+		A4AF590126A04E20005A222F /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		A4AF590526A04E27005A222F /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		A4CFB808269F460A00B780A5 /* Zipline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zipline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4CFB80B269F460A00B780A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4CFB80D269F460A00B780A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +108,15 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		A4AF590026A04E10005A222F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A4AF590126A04E20005A222F /* ApiRequest.swift */,
+				A4AF590526A04E27005A222F /* Services.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		A4CFB7FF269F460A00B780A5 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +153,7 @@
 			children = (
 				A4CFB831269F46F200B780A5 /* Delegates */,
 				A4AF58FB26A04CAC005A222F /* Common */,
+				A4AF590026A04E10005A222F /* Services */,
 				A4AF58F726A04BF2005A222F /* Extension */,
 			);
 			path = Utility;
@@ -325,6 +339,8 @@
 				A4AF58EE26A049F2005A222F /* MovieCell.swift in Sources */,
 				A4CFB80C269F460A00B780A5 /* AppDelegate.swift in Sources */,
 				A4CFB80E269F460A00B780A5 /* SceneDelegate.swift in Sources */,
+				A4AF590626A04E27005A222F /* Services.swift in Sources */,
+				A4AF590226A04E20005A222F /* ApiRequest.swift in Sources */,
 				A4AF58F926A04BFF005A222F /* Ext_UIImageView.swift in Sources */,
 				A4AF58E826A047A4005A222F /* Movie.swift in Sources */,
 				A4AF58FD26A04CBD005A222F /* ShareData.swift in Sources */,

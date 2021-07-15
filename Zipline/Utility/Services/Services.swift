@@ -10,12 +10,23 @@ import SwiftyJSON
 
 class Services: NSObject {
     static func getUrl() -> String {
-        let baseURL = "https://api.themoviedb.org/3/movie"
+        let baseURL = "https://api.themoviedb.org/3/movie/"
         return baseURL
     }
     
     class func get_top_movies(page: Int, completion : @escaping (_ result: JSON?, _ error: String?)->Void ) {
-        let url = "\(getUrl())/top_rated"
+        let url = "\(getUrl())top_rated"
+        let language = Locale.current.languageCode?.lowercased() ?? "en"
+        let region = Locale.current.regionCode?.uppercased() ?? "US"
+        let params = ["api_key": ShareData.api_key, "language": language, "region": region, "page": "\(page)"] as [String : String]
+        ApiRequest.requestGet(URL: url, params: params) {(result, error) in
+            completion(result, error)
+        }
+    }
+    
+    class func get_movies(index: Int, page: Int, completion : @escaping (_ result: JSON?, _ error: String?)->Void ) {
+        let suffixes = ["top_rated", "popular", "upcoming"]
+        let url = "\(getUrl())\(suffixes[index])"
         let language = Locale.current.languageCode?.lowercased() ?? "en"
         let region = Locale.current.regionCode?.uppercased() ?? "US"
         let params = ["api_key": ShareData.api_key, "language": language, "region": region, "page": "\(page)"] as [String : String]

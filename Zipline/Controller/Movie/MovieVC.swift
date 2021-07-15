@@ -28,8 +28,10 @@ class MovieVC: UIViewController {
     }
     
     @IBAction func segment_changed(_ sender: UISegmentedControl) {
-        page = 0
         title_lbl.text = titles[sender.selectedSegmentIndex]
+        page = 0
+        movies.removeAll()
+        tableView.reloadData()
         read_movies()
     }
     
@@ -39,7 +41,7 @@ class MovieVC: UIViewController {
             return
         }
         page += 1
-        Services.get_top_movies(page: page) {(result, error) in
+        Services.get_movies(index: segment_control.selectedSegmentIndex, page: page) {(result, error) in
             if error != nil {
                 print(error!)
                 return

@@ -9,7 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieVC" customModule="Zipline" customModuleProvider="target">
             <connections>
+                <outlet property="segment_control" destination="ymz-OR-vG8" id="33B-r9-OF0"/>
                 <outlet property="tableView" destination="Me8-qz-pKj" id="5tB-rE-I88"/>
+                <outlet property="title_lbl" destination="j3O-50-5TN" id="5Ba-jY-ym3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,8 +24,8 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="40"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Rated Movies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3O-50-5TN">
-                            <rect key="frame" x="139" y="9.5" width="136" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <rect key="frame" x="134" y="9.5" width="146" height="21.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -35,23 +37,50 @@
                         <constraint firstItem="j3O-50-5TN" firstAttribute="centerX" secondItem="Y3v-8n-g2x" secondAttribute="centerX" id="zzk-5x-4iC"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdD-Ih-dJJ">
+                    <rect key="frame" x="0.0" y="84" width="414" height="50"/>
+                    <subviews>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ymz-OR-vG8">
+                            <rect key="frame" x="84.5" y="9.5" width="245" height="32"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <segments>
+                                <segment title="Top Rated"/>
+                                <segment title="Popular"/>
+                                <segment title="Recent"/>
+                            </segments>
+                            <color key="selectedSegmentTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="segment_changed:" destination="-1" eventType="valueChanged" id="3EA-uv-aZI"/>
+                            </connections>
+                        </segmentedControl>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ymz-OR-vG8" firstAttribute="centerX" secondItem="qdD-Ih-dJJ" secondAttribute="centerX" id="GBb-2G-Kyi"/>
+                        <constraint firstItem="ymz-OR-vG8" firstAttribute="centerY" secondItem="qdD-Ih-dJJ" secondAttribute="centerY" id="OMM-FY-YWj"/>
+                        <constraint firstAttribute="height" constant="50" id="RAJ-PX-bvj"/>
+                    </constraints>
+                </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Me8-qz-pKj">
-                    <rect key="frame" x="0.0" y="84" width="414" height="778"/>
+                    <rect key="frame" x="0.0" y="134" width="414" height="728"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="Me8-qz-pKj" firstAttribute="top" secondItem="Y3v-8n-g2x" secondAttribute="bottom" id="3uB-Mw-sy2"/>
+                <constraint firstItem="qdD-Ih-dJJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5vQ-Mi-yDB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qdD-Ih-dJJ" secondAttribute="trailing" id="N7Q-Gy-QmJ"/>
                 <constraint firstItem="Me8-qz-pKj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="RNX-wK-seJ"/>
+                <constraint firstItem="Me8-qz-pKj" firstAttribute="top" secondItem="qdD-Ih-dJJ" secondAttribute="bottom" id="Rux-Rj-SzD"/>
+                <constraint firstItem="qdD-Ih-dJJ" firstAttribute="top" secondItem="Y3v-8n-g2x" secondAttribute="bottom" id="SMr-40-xl2"/>
                 <constraint firstItem="Y3v-8n-g2x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Yog-Ty-Uec"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Y3v-8n-g2x" secondAttribute="trailing" id="dNb-Ee-iBX"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Me8-qz-pKj" secondAttribute="trailing" id="gYQ-Zr-l0J"/>
                 <constraint firstItem="Y3v-8n-g2x" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="nj6-Lw-d7a"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Me8-qz-pKj" secondAttribute="bottom" id="wRd-jB-dAY"/>
             </constraints>
-            <point key="canvasLocation" x="14" y="119"/>
+            <point key="canvasLocation" x="13.043478260869566" y="118.52678571428571"/>
         </view>
     </objects>
 </document>

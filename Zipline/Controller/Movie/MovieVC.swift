@@ -9,18 +9,28 @@ import UIKit
 
 class MovieVC: UIViewController {
 
+    @IBOutlet weak var title_lbl: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var segment_control: UISegmentedControl!
     
     private var page = 0
     private var total_page = Int()
     private var isLoadingMore = false
     private var movies = [Movie]()
+    private let titles = ["Top Rated Movies", "Popular Movies", "Recently Relased Movies"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        init_UI()
         read_movies()
         setupTableView()
+    }
+    
+    @IBAction func segment_changed(_ sender: UISegmentedControl) {
+        page = 0
+        title_lbl.text = titles[sender.selectedSegmentIndex]
+        read_movies()
     }
     
     func read_movies() {
@@ -52,6 +62,11 @@ class MovieVC: UIViewController {
         tableView.register(UINib(nibName: "MovieCell", bundle: nil), forCellReuseIdentifier: "MovieCell")
         tableView.separatorStyle = .none
         tableView.reloadData()
+    }
+    
+    func init_UI() {
+        segment_control.selectedSegmentIndex = 0
+        title_lbl.text = titles[0]
     }
 }
 

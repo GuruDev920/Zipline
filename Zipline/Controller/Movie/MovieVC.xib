@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieVC" customModule="Zipline" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="Me8-qz-pKj" id="5tB-rE-I88"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,8 +17,40 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y3v-8n-g2x">
+                    <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Rated Movies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3O-50-5TN">
+                            <rect key="frame" x="139" y="9.5" width="136" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="j3O-50-5TN" firstAttribute="centerY" secondItem="Y3v-8n-g2x" secondAttribute="centerY" id="4Wb-Y4-ICG"/>
+                        <constraint firstAttribute="height" constant="40" id="vSo-2G-8iI"/>
+                        <constraint firstItem="j3O-50-5TN" firstAttribute="centerX" secondItem="Y3v-8n-g2x" secondAttribute="centerX" id="zzk-5x-4iC"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Me8-qz-pKj">
+                    <rect key="frame" x="0.0" y="84" width="414" height="778"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Me8-qz-pKj" firstAttribute="top" secondItem="Y3v-8n-g2x" secondAttribute="bottom" id="3uB-Mw-sy2"/>
+                <constraint firstItem="Me8-qz-pKj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="RNX-wK-seJ"/>
+                <constraint firstItem="Y3v-8n-g2x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Yog-Ty-Uec"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Y3v-8n-g2x" secondAttribute="trailing" id="dNb-Ee-iBX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Me8-qz-pKj" secondAttribute="trailing" id="gYQ-Zr-l0J"/>
+                <constraint firstItem="Y3v-8n-g2x" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="nj6-Lw-d7a"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Me8-qz-pKj" secondAttribute="bottom" id="wRd-jB-dAY"/>
+            </constraints>
             <point key="canvasLocation" x="14" y="119"/>
         </view>
     </objects>

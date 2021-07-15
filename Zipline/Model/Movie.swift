@@ -35,7 +35,7 @@ class Movie: Codable {
         self.original_title = json["original_title"].stringValue
         self.overview = json["overview"].stringValue
         self.popularity = json["popularity"].doubleValue
-        self.poster_path = json["poster_path"].stringValue
+        self.poster_path = ShareData.poster_prefix + json["poster_path"].stringValue
         self.release_date = json["release_date"].stringValue
         self.title = json["title"].stringValue
         self.video = json["video"].boolValue

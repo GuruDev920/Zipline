@@ -10,6 +10,6 @@ target 'Zipline' do
 pod 'Alamofire'
 pod 'SwiftyJSON'
 pod 'Kingfisher'
-
+pod 'Cosmos'
 
 end

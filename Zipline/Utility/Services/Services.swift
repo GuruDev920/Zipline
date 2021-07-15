@@ -16,7 +16,9 @@ class Services: NSObject {
     
     class func get_top_movies(page: Int, completion : @escaping (_ result: JSON?, _ error: String?)->Void ) {
         let url = "\(getUrl())/top_rated"
-        let params = ["api_key": ShareData.api_key, "language": "en-US", "region": "US", "page": "\(page)"] as [String : String]
+        let language = Locale.current.languageCode?.lowercased() ?? "en"
+        let region = Locale.current.regionCode?.uppercased() ?? "US"
+        let params = ["api_key": ShareData.api_key, "language": language, "region": region, "page": "\(page)"] as [String : String]
         ApiRequest.requestGet(URL: url, params: params) {(result, error) in
             completion(result, error)
         }
